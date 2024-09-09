@@ -46,7 +46,7 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build $DOCKER_USER/graph-ql:$VERSION
-        docker build $DOCKER_USER/graph-ql:latest
+        docker push $DOCKER_USER/graph-ql:$VERSION
+        docker push $DOCKER_USER/graph-ql:latest
         
       
